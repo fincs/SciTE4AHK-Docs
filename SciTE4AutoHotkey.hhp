@@ -1,0 +1,37 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=SciTE4AutoHotkey.chm
+Contents file=toc.hhc
+Default topic=intro.htm
+Display compile progress=No
+Language=0x409 English (United States)
+Title=SciTE4AutoHotkey v3 Help
+
+
+[FILES]
+changelog.htm
+credits.htm
+intro.htm
+license.htm
+pages\ahkhlp.htm
+pages\ahknettool.htm
+pages\calltips_autoc.htm
+pages\comiface.htm
+pages\contextmenu.htm
+pages\debugger.htm
+pages\dialogcreators.htm
+pages\folding.htm
+pages\gendocs.htm
+pages\macros.htm
+pages\opening.htm
+pages\settings.htm
+pages\slutil.htm
+pages\smartgui.htm
+pages\synhighl.htm
+pages\tillagoto.htm
+pages\toolbar.htm
+pages\tooldocu.htm
+pages\working.htm
+
+[INFOTYPES]
+

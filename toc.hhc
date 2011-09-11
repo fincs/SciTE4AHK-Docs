@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+  <head>
+    <meta name="generator" content="HelpNDoc Freeware Edition">
+  </head>
+
+  <body>
+  
+    <object type="text/site properties">
+      <param name="Font" value="Microsoft Sans Serif,8,0">
+      <param name="Window Styles" value="0x800025">
+    </object>
+    
+      <ul>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Introduction">
+          <param name="ImageNumber" value="17">
+          <param name="Local" value="intro.htm">
+        </object> </li>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Changelog">
+          <param name="Local" value="changelog.htm">
+        </object> </li>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Usage">
+          <param name="ImageNumber" value="1">
+        </object> </li>
+          <ul>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Opening AutoHotkey scripts">
+              <param name="ImageNumber" value="11">
+              <param name="Local" value="pages/opening.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Working with AutoHotkey scripts">
+              <param name="ImageNumber" value="19">
+              <param name="Local" value="pages/working.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Using the AutoHotkey help">
+              <param name="Local" value="pages/ahkhlp.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Debugging AutoHotkey scripts">
+              <param name="Local" value="pages/debugger.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="The toolbar">
+              <param name="ImageNumber" value="41">
+              <param name="Local" value="pages/toolbar.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Using macros">
+              <param name="Local" value="pages/macros.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Changing settings">
+              <param name="Local" value="pages/settings.htm">
+            </object> </li>
+          </ul>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Editing features">
+          <param name="ImageNumber" value="1">
+        </object> </li>
+          <ul>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Syntax highlighting">
+              <param name="ImageNumber" value="11">
+              <param name="Local" value="pages/synhighl.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Code folding">
+              <param name="ImageNumber" value="23">
+              <param name="Local" value="pages/folding.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Context menu">
+              <param name="ImageNumber" value="37">
+              <param name="Local" value="pages/contextmenu.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Calltips and AutoComplete">
+              <param name="Local" value="pages/calltips_autoc.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="COM interface">
+              <param name="Local" value="pages/comiface.htm">
+            </object> </li>
+          </ul>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Tool documentation">
+          <param name="ImageNumber" value="1">
+          <param name="Local" value="pages/tooldocu.htm">
+        </object> </li>
+          <ul>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="SmartGUI Creator 4.0">
+              <param name="ImageNumber" value="11">
+              <param name="Local" value="pages/smartgui.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Dialog creators">
+              <param name="ImageNumber" value="11">
+              <param name="Local" value="pages/dialogcreators.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="AutoHotkey.net Tool">
+              <param name="ImageNumber" value="13">
+              <param name="Local" value="pages/ahknettool.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="GenDocs 2.1">
+              <param name="Local" value="pages/gendocs.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="Scriptlet Utility">
+              <param name="Local" value="pages/slutil.htm">
+            </object> </li>
+            
+            <li> <object type="text/sitemap">
+              <param name="Name" value="TillaGoto">
+              <param name="Local" value="pages/tillagoto.htm">
+            </object> </li>
+          </ul>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="License">
+          <param name="Local" value="license.htm">
+        </object> </li>
+        
+        <li> <object type="text/sitemap">
+          <param name="Name" value="Credits">
+          <param name="ImageNumber" value="17">
+          <param name="Local" value="credits.htm">
+        </object> </li>
+      </ul>
+    
+  </body>
+
+</html>
