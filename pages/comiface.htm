@@ -2,10 +2,152 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Not written yet</title>
+<title>COM interface</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<h1>COM interface <span class="ver">[v3 beta 5+]</span></h1>
+<p>You can interface with SciTE programmatically by using COM.</p>
+<p>On startup, SciTE registers a COM IDispatch object under the AppID of SciTE4AHK.Application that you
+can retrieve using ComObjActive() or similar. Here's a sample AutoHotkey script to get the current file:</p>
+<pre class="NoIndent">oSciTE := ComObjActive("SciTE4AHK.Application")
+MsgBox % oSciTE.CurrentFile</pre>
+<p>List of methods and (GET-only) properties:</p>
+
+<div class="methodShort"><h2>Version</h2>
+<p>Gets the current SciTE4AutoHotkey version.</p>
+<pre class="Syntax">oSciTE.Version</pre>
+</div>
+
+<div class="methodShort"><h2>SciTEHandle</h2>
+<p>Gets the HWND of the SciTE window.</p>
+<pre class="Syntax">oSciTE.SciTEHandle</pre>
+</div>
+
+<div class="methodShort"><h2>Message()</h2>
+<p>Sends a message to either SciTE or the toolbar.</p>
+<pre class="Syntax">oSciTE.Message(msg [, wParam, lParam])</pre>
+<table class="info">
+  <tr><td width="15%">msg</td><td width="85%">The message number to send.</td></tr>
+  <tr><td width="15%">wParam</td><td width="85%"><em>(Optional)</em> The wParam of the message. If omitted, defaults to zero.</td></tr>
+  <tr><td width="15%">lParam</td><td width="85%"><em>(Optional)</em> The lParam of the message. If omitted, defaults to zero.</td></tr>
+</table>
+<p>If the message number is greater or equal than 0x1000, it is sent to the toolbar using PostMessage.
+Else, it's sent to SciTE using SendMessage.</p>
+</div>
+
+<div class="methodShort"><h2>ReloadProps</h2>
+<p>Reloads all SciTE property files.</p>
+<pre class="Syntax">oSciTE.ReloadProps()</pre>
+</div>
+
+<div class="methodShort"><h2>CurrentFile</h2>
+<p>Gets the full path of the currently active file.</p>
+<pre class="Syntax">oSciTE.CurrentFile</pre>
+</div>
+
+<div class="methodShort"><h2>DebugFile()</h2>
+<p>Opens a file if necessary and starts a debugging session.</p>
+<pre class="Syntax">oSciTE.DebugFile(filename)</pre>
+<table class="info">
+  <tr><td width="15%">filename</td><td width="85%">The file to debug.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>Tabs</h2>
+<p>Gets a TabList object containing the filenames of all currently opened tabs:</p>
+<pre class="Syntax">oTabs := oSciTE.Tabs</pre>
+<table class="info">
+  <tr><td width="15%"><strong>Returns</strong></td>
+    <td width="85%">
+    <p>A TabList object:</p>
+    
+    <div class="methodShort"><h2>Array</h2>
+    <p>Retrieves the tab list as a SafeArray.</p>
+    <pre class="Syntax">oTabs.Array</pre>
+    </div>
+    
+    <div class="methodShort"><h2>List</h2>
+    <p>Retrieves the tab list as a <code>`n</code>-delimited list.</p>
+    <pre class="Syntax">oTabs.List</pre>
+    </div>
+    
+    <div class="methodShort"><h2>Count</h2>
+    <p>Retrieves the number of tabs.</p>
+    <pre class="Syntax">oTabs.Count</pre>
+    </div>
+    
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>SwitchToTab()</h2>
+<p>Switches to the specified tab.</p>
+<pre class="Syntax">oSciTE.SwitchToTab(tabidx)</pre>
+<table class="info">
+  <tr><td width="15%">tabidx</td><td width="85%">Tab number (zero based).</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>Document</h2>
+<p>Gets the whole text of the current file.</p>
+<pre class="Syntax">oSciTE.Document</pre>
+</div>
+
+<div class="methodShort"><h2>Selection</h2>
+<p>Gets the current selection.</p>
+<pre class="Syntax">oSciTE.Selection</pre>
+</div>
+
+<div class="methodShort"><h2>InsertText()</h2>
+<p>Inserts the specified text at the specified position.</p>
+<pre class="Syntax">oSciTE.InsertText(text [, pos])</pre>
+<table class="info">
+  <tr><td width="15%">text</td><td width="85%">The text to insert.</td></tr>
+  <tr><td width="15%">wParam</td><td width="85%"><em>(Optional)</em> The position at which insert the text. If omitted, the current caret position is used instead.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>ActivePlatform</h2>
+<p>Gets the name of the currently selected platform.</p>
+<pre class="Syntax">oSciTE.ActivePlatform</pre>
+</div>
+
+<div class="methodShort"><h2>SetPlatform()</h2>
+<p>Selects the current platform.</p>
+<pre class="Syntax">oSciTE.SetPlatform(platform)</pre>
+<table class="info">
+  <tr><td width="15%">platform</td><td width="85%">The name of the platform to set.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>SendDirectorMsg()</h2>
+<p>Sends a message to SciTE using the <a href="http://www.scintilla.org/SciTEDirector.html">Director interface.</a></p>
+<pre class="Syntax">oSciTE.SendDirectorMsg(message)</pre>
+<table class="info">
+  <tr><td width="15%">message</td><td width="85%">The message to send.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>SendDirectorMsgRet()</h2>
+<p>Same as above, but allows for getting a return value.</p>
+<pre class="Syntax">oSciTE.SendDirectorMsgRet(message)</pre>
+<table class="info">
+  <tr><td width="15%">message</td><td width="85%">The message to send.</td></tr>
+  <tr><td width="15%"><strong>Returns</td><td width="85%">A COM object with two properties: <code>verb</code> and <code>value</code>.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>SendDirectorMsgRetArray()</h2>
+<p>Same as above, but allows for getting an array as the return value.</p>
+<pre class="Syntax">oSciTE.SendDirectorMsgRet(message)</pre>
+<table class="info">
+  <tr><td width="15%">message</td><td width="85%">The message to send.</td></tr>
+  <tr><td width="15%"><strong>Returns</td><td width="85%">A SafeArray of COM objects with two properties: <code>verb</code> and <code>value</code>.</td></tr>
+</table>
+</div>
+
 </body>
 </html>
