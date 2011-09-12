@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestSuite.ahk</title>
+<meta name="Generator" content="SciTE - www.Scintilla.org" />
+<script language="JavaScript" type="text/javascript">
+<!--
+function symbol(id, sym) {
+ if (id.textContent==undefined) {
+ id.innerText=sym; } else {
+ id.textContent=sym; }
+}
+function toggle(id) {
+var thislayer=document.getElementById('ln'+id);
+id-=1;
+var togline=document.getElementById('hd'+id);
+var togsym=document.getElementById('bt'+id);
+if (thislayer.style.display == 'none') {
+ thislayer.style.display='block';
+ togline.style.textDecoration='none';
+ symbol(togsym,'- ');
+} else {
+ thislayer.style.display='none';
+ togline.style.textDecoration='underline';
+ symbol(togsym,'+ ');
+}
+}
+//-->
+</script>
+<style type="text/css">
+.S0 {
+	font-weight: bold;
+	color: #707070;
+}
+.S1 {
+	font-style: italic;
+	color: #008000;
+}
+.S2 {
+	font-style: italic;
+	color: #406040;
+}
+.S3 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.S4 {
+	font-weight: bold;
+	color: #7F200F;
+}
+.S5 {
+	font-weight: bold;
+	color: #FF4F00;
+}
+.S6 {
+	font-weight: bold;
+	color: #404040;
+}
+.S7 {
+	font-weight: bold;
+	color: #2F4F7F;
+}
+.S8 {
+	color: #CF2F0F;
+}
+.S9 {
+	font-weight: bold;
+	color: #CF2F0F;
+	background: #E4FFE4;
+	text-decoration: inherit;
+}
+.S10 {
+	color: #000000;
+	background: #FFFFA1;
+	text-decoration: inherit;
+}
+.S11 {
+	font-style: italic;
+	font-weight: bold;
+	color: #480048;
+}
+.S12 {
+	font-weight: bold;
+	color: #004080;
+}
+.S13 {
+	font-style: italic;
+	color: #0F707F;
+}
+.S14 {
+	font-style: italic;
+	font-weight: bold;
+	color: #F04020;
+}
+.S15 {
+	font-weight: bold;
+	color: #FF00FF;
+}
+.S16 {
+	font-style: italic;
+	font-weight: bold;
+	color: #CF00CF;
+}
+.S17 {
+	font-style: italic;
+	color: #0000FF;
+}
+.S19 {
+	font-style: italic;
+	font-weight: bold;
+	color: #CF00CF;
+	background: #F9F9FF;
+	text-decoration: inherit;
+}
+.S20 {
+	color: #000000;
+	background: #FFC0C0;
+	text-decoration: inherit;
+}
+span {
+	font-family: 'Courier New';
+	color: #000000;
+	font-size: 9pt;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+<span><span id="hd0" onclick="toggle('1')"><span id="bt0">- </span><span class="S2">/*</span></span><br />
+<span id="ln1">&nbsp; <span class="S2">&nbsp;***************************************************</span><br />
+&nbsp; <span class="S2">&nbsp;* SciTE4AutoHotkey v3 syntax highlighting demo &nbsp;&nbsp;&nbsp;*</span><br />
+&nbsp; <span class="S2">&nbsp;* August 19, 2010 - fincs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span><br />
+&nbsp; <span class="S2">&nbsp;***************************************************</span><br />
+&nbsp; <span class="S2">*/</span><br /></span>
+&nbsp; <br />
+&nbsp; <span class="S1">; Normal comment</span><br />
+<span id="hd8" onclick="toggle('9')"><span id="bt8">- </span><span class="S2">/*</span></span><br />
+<span id="ln9">&nbsp; <span class="S2">Block comment</span><br />
+&nbsp; <span class="S2">*/</span><br /></span>
+&nbsp; <br />
+&nbsp; <span class="S1">; Directives, keywords</span><br />
+&nbsp; <span class="S14">#SingleInstance</span><span class="S0"> </span><span class="S17">Force</span><br />
+&nbsp; <span class="S14">#NoTrayIcon</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Command, literal text, escape sequence</span><br />
+&nbsp; <span class="S12">MsgBox</span><span class="S4">,</span><span class="S0"> Hello World </span><span class="S3">`;</span><span class="S0"> </span><span class="S17">This</span><span class="S0"> isn't a comment</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Operators</span><br />
+&nbsp; <span class="S0">Bar </span><span class="S5">=</span><span class="S0"> Foo &nbsp;</span><span class="S1">; operators</span><br />
+&nbsp; <span class="S0">Foo </span><span class="S4">:=</span><span class="S0"> Bar </span><span class="S1">; expression assignment operators</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; String</span><br />
+&nbsp; <span class="S11">Var</span><span class="S0"> </span><span class="S4">:=</span><span class="S0"> </span><span class="S6">"This is a test"</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Number</span><br />
+&nbsp; <span class="S0">Num </span><span class="S5">=</span><span class="S0"> </span><span class="S7">40</span><span class="S0"> </span><span class="S5">+</span><span class="S0"> </span><span class="S7">4</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Dereferencing</span><br />
+&nbsp; <span class="S0">Foo </span><span class="S4">:=</span><span class="S0"> </span><span class="S4">%</span><span class="S9">Bar</span><span class="S4">%</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Flow of control, built-in-variables, BIV dereferencing</span><br />
+&nbsp; <span class="S11">if</span><span class="S0"> </span><span class="S16">true</span><br />
+&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S12">MsgBox</span><span class="S4">,</span><span class="S0"> </span><span class="S17">This</span><span class="S0"> will always be displayed</span><br />
+&nbsp; <span class="S11">Loop</span><span class="S4">,</span><span class="S0"> </span><span class="S7">3</span><br />
+&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S12">MsgBox</span><span class="S0"> Repetition </span><span class="S8">#</span><span class="S4">%</span><span class="S19">A_Index</span><span class="S4">%</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Built-in-function call</span><br />
+&nbsp; <span class="S12">MsgBox</span><span class="S0"> % </span><span class="S13">SubStr</span><span class="S5">(</span><span class="S6">"blaHello Worldbla"</span><span class="S4">,</span><span class="S0"> </span><span class="S7">4</span><span class="S4">,</span><span class="S0"> </span><span class="S7">11</span><span class="S5">)</span><br />
+&nbsp; <br />
+&nbsp; <span class="S11">if</span><span class="S0"> </span><span class="S16">false</span><br />
+<span id="hd42" onclick="toggle('43')"><span id="bt42">- </span><span class="S4">{</span></span><br />
+<span id="ln43">&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S1">; Keys and buttons</span><br />
+&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S12">Send</span><span class="S4">,</span><span class="S0"> </span><span class="S4">{</span><span class="S15">F1</span><span class="S4">}</span><br />
+&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S1">; Syntax errors (the following is fake, but to show you)</span><br />
+&nbsp; <span class="S0">&nbsp; &nbsp; MyVar </span><span class="S5">=</span><span class="S0"> </span><span class="S20">"This is a test</span><br />
+&nbsp; <span class="S4">}</span><br /></span>
+&nbsp; <br />
+&nbsp; <span class="S11">ExitApp</span><br />
+&nbsp; <br />
+&nbsp; <span class="S1">; Label, hotkey, hotstring</span><br />
+&nbsp; <span class="S10">Label</span><span class="S4">:</span><br />
+&nbsp; <span class="S8">#v</span><span class="S4">::</span><span class="S12">MsgBox</span><span class="S0"> You pressed Win</span><span class="S5">+</span><span class="S0">V</span><br />
+&nbsp; <span class="S4">::</span><span class="S10">btw</span><span class="S4">::</span><span class="S6">by the way</span><br />
+&nbsp; <span class="S0"></span></span>
+</body>
+</html>
