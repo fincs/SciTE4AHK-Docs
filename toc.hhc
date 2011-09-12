@@ -108,7 +108,6 @@
         <li> <object type="text/sitemap">
           <param name="Name" value="Tool documentation">
           <param name="ImageNumber" value="1">
-          <param name="Local" value="pages/tooldocu.htm">
         </object> </li>
           <ul>
             
