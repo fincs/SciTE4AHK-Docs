@@ -2,10 +2,44 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Not written yet</title>
+<title>Debugging AutoHotkey scripts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<h1>Debugging AutoHotkey scripts</h1>
+<p>If you have installed AutoHotkey_L or the Porting Pack, you can debug your scripts. In order to do so,
+either press F7, go to Tools &gt; Debug or click on the toolbar button. The SciTE debugger will start up
+and you'll enter in Debugging mode.</p>
+<h2>1. Basic debugging controls</h2>
+<p>In Debugging mode you can control the execution of your script. When the script is paused, the next
+line that will be executed is highlighted. These are the available commands (all can be found in the toolbar):</p>
+<ul>
+<li>Run (F5). Execution is paused when a breakpoint is reached (see below).</li>
+<li>Stop script.</li>
+<li>Run current line of code (F10).</li>
+<li>Run until next line of code (F11).</li>
+<li>Callstack (see below).</li>
+<li>Variable list (see below).</li>
+</ul>
+<h2>2. Breakpoints</h2>
+<p>Breakpoints are pausing points in a program. If AutoHotkey_L is about to execute a line that has a breakpoint,
+execution is paused. In order to set a breakpoint on a line, click on the margin to the right of the line numbers:</p>
+<img src="img/bkpoint.png" alt="" border="0"/>
+<h2>3. Inspecting variable contents</h2>
+<p>You can retrieve the contents of a variable and even modify them. In order to do so, find an instance of the
+variable name, right click it (or select it and right click) then choose "Inspect variable..." to reveal the
+Variable inspection dialog. If the variable contains an object, you'll be presented with the Object inspection
+dialog instead. In it, you can double-click a field to inspect and edit it.</p>
+<p><img src="img/inspect.png" alt="" border="0"/> <img src="img/inspectobj.png" alt="" border="0"/></p>
+<h2>4. Listing all variables</h2>
+<p>You can also list all variables by clicking on the appropriate toolbar button.</p>
+<img src="img/vlist.png" alt="" border="0"/>
+<p>In order to inspect a variable, double click on it.</p>
+<h2>5. Viewing the callstack</h2>
+<p>Sometimes it is useful to know the path the script has taken. This list is called the callstack. In order
+to see it, click on the appropriate toolbar button.</p>
+<img src="img/cstack.png" alt="" border="0"/>
+<p>You can go to each of the script positions by double-clicking them in the callstack viewer.</p>
 </body>
 </html>
