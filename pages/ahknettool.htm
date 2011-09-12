@@ -52,15 +52,15 @@ It consists of a set of special comments that will tell the tool which files to 
 </div>
 
 <p>Here is a more detailed example that shows how to upload a script and its dependencies:</p>
-<pre class="NoIndent">; Upload this script to myScripts/someScript
+<pre class="NoIndent"><em>; Upload this script to myScripts/someScript</em>
 ;#AHKNet_UploadScript myScripts/someScript/main.ahk
 
-; Go to myScripts/someScript. Directory checking takes a lot of time
+<em>; Go to myScripts/someScript. Directory checking takes a lot of time
 ; so it's better to check only once (UploadScript), go there and upload
-; the files without specifying the path.
+; the files without specifying the path.</em>
 ;#AHKNet_ChangeDirectory myScripts/ahknetutil
 
-; Upload the dependencies
+<em>; Upload the dependencies</em>
 ;#AHKNet_UploadFile "dependency1.ahk" "dependency1.ahk"
 ;#AHKNet_UploadFile "dependency2.ahk" "dependency2.ahk"
 ;#AHKNet_UploadFile "dependency3.ahk" "dependency3.ahk"</pre>
