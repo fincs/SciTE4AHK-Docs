@@ -10,6 +10,27 @@
 <h1>Changelog</h1>
 
 <!-- new versions go here -->
+<h2>v3.0.01 - November 9, 2012</h2>
+<ul>
+<li><strong>Upgraded to SciTE/Scintilla 3.2.3</strong></li>
+<li><strong>Added: AutoHotkey v1.1.09 asynchronous debugging support</strong></li>
+<li><strong>Added: Support for debugging already running scripts</strong> (also known as debugger attaching/detaching)</li>
+<li>Upgraded to GenDocs v3.0-alpha003</li>
+<li>Editing fixes:<ul>
+  <li>Support for the old <code>obj._BuiltInMethod()</code> syntax is removed</li>
+  <li><code>else</code> indenting bug fixed</li>
+</ul></li>
+<li>Fixed: Variable dereferencing autocomplete</li>
+<li><strong>TillaGoto is now configurable</strong> through SciTEUser.properties, including listbox sorting.</li>
+<li>TillaGoto and autoupdates can now be turned off through SciTEUser.properties</li>
+<li>The non-portable build of <strong>SciTE now automatically detects the AutoHotkey installation directory</strong>, and thus it can be installed to anywhere</li>
+<li>The internal copy of AutoHotkey.exe has been renamed to InternalAHK.exe in order to avoid confusion.</li>
+<li>New COM interface method: <code>oSciTE.OpenFile(filename)</code></li>
+<li>Sweeping changes in order to use the COM interface (including TillaGoto) instead of less reliable methods.</li>
+<li>Double-clicking on an empty spot in the tab bar now opens a new Untitled document.</li>
+<li>Other miscellaneous bugfixes and improvements</li>
+</ul>
+
 <h2>v3.0.00 - July 22, 2012</h2>
 <ul>
 <li><strong>Upgraded to SciTE/Scintilla 3.2.1</strong></li>

@@ -8,14 +8,14 @@
 </head>
 <body>
 <h1>Debugging AutoHotkey scripts</h1>
-<p>If you have installed AutoHotkey_L, you can debug your scripts. In order to do so,
-either press F7, go to Tools &gt; Debug or click on the toolbar button. The SciTE debugger will start up
-and you'll enter in Debugging mode.</p>
+<p>You can debug your scripts. In order to do so, either press F7, go to Tools &gt; Debug or
+click on the toolbar button. The SciTE debugger will start up and you'll enter Debugging mode.</p>
 <h2>Basic debugging controls</h2>
 <p>In Debugging mode you can control the execution of your script. When the script is paused, the next
 line that will be executed is highlighted. These are the available commands (all can be found in the toolbar):</p>
 <ul>
 <li>Run (F5). Execution is paused when a breakpoint is reached (see below).</li>
+<li>Pause script.</li>
 <li>Stop script.</li>
 <li>Run current line of code (F10).</li>
 <li>Run until next line of code (F11).</li>
@@ -23,7 +23,7 @@ line that will be executed is highlighted. These are the available commands (all
 <li>Variable list (see below).</li>
 </ul>
 <h2>Breakpoints</h2>
-<p>Breakpoints are pausing points in a program. If AutoHotkey_L is about to execute a line that has a breakpoint,
+<p>Breakpoints are pausing points in a program. If AutoHotkey is about to execute a line that has a breakpoint,
 execution is paused. In order to set a breakpoint on a line, click on the margin to the right of the line numbers:</p>
 <img src="img/bkpoint.png" alt="" border="0"/>
 <h2>Inspecting variable contents</h2>
@@ -41,5 +41,9 @@ dialog instead. In it, you can double-click a field to inspect and edit it.</p>
 to see it, click on the appropriate toolbar button.</p>
 <img src="img/cstack.png" alt="" border="0"/>
 <p>You can go to each of the script positions by double-clicking them in the callstack viewer.</p>
+<h2>Debugging currently running scripts</h2>
+<p>It is possible to debug a script that is already running. In order to do so go to Tools > "Debug a currently
+running script...", then a window should appear with a list of all scripts available for debugging. Double-click
+the one you want to debug.</p>
 </body>
 </html>

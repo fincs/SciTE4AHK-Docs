@@ -28,7 +28,8 @@ MsgBox % oSciTE.CurrentFile</pre>
 <div class="methodShort"><h2>Message()</h2>
 <p>Sends a message to either SciTE or the toolbar.</p>
 <pre class="Syntax">oSciTE.Message(msg [, wParam, lParam])</pre>
-<table class="info">
+<table class="info">
+
   <tr><td width="15%">msg</td><td width="85%">The message number to send.</td></tr>
   <tr><td width="15%">wParam</td><td width="85%"><em>(Optional)</em> The wParam of the message. If omitted, defaults to zero.</td></tr>
   <tr><td width="15%">lParam</td><td width="85%"><em>(Optional)</em> The lParam of the message. If omitted, defaults to zero.</td></tr>
@@ -37,14 +38,27 @@ MsgBox % oSciTE.CurrentFile</pre>
 Else, it's sent to SciTE using SendMessage.</p>
 </div>
 
-<div class="methodShort"><h2>ReloadProps</h2>
+<div class="methodShort"><h2>ReloadProps()</h2>
 <p>Reloads all SciTE property files.</p>
 <pre class="Syntax">oSciTE.ReloadProps()</pre>
+</div>
+
+<div class="methodShort"><h2>SciTEDir <span class="ver">[v3.0.00 RC+]</span></h2>
+<p>Returns the SciTE4AutoHotkey installation directory.</p>
+<pre class="Syntax">oSciTE.SciTEDir</pre>
 </div>
 
 <div class="methodShort"><h2>CurrentFile</h2>
 <p>Gets the full path of the currently active file.</p>
 <pre class="Syntax">oSciTE.CurrentFile</pre>
+</div>
+
+<div class="methodShort"><h2>OpenFile() <span class="ver">[v3.0.01+]</span></h2>
+<p>Opens a file in SciTE.</p>
+<pre class="Syntax">oSciTE.OpenFile(filename)</pre>
+<table class="info">
+  <tr><td width="15%">filename</td><td width="85%">The file to open.</td></tr>
+</table>
 </div>
 
 <div class="methodShort"><h2>DebugFile()</h2>
@@ -104,7 +118,8 @@ Else, it's sent to SciTE using SendMessage.</p>
 <div class="methodShort"><h2>InsertText()</h2>
 <p>Inserts the specified text at the specified position.</p>
 <pre class="Syntax">oSciTE.InsertText(text [, pos])</pre>
-<table class="info">
+<table class="info">
+
   <tr><td width="15%">text</td><td width="85%">The text to insert.</td></tr>
   <tr><td width="15%">wParam</td><td width="85%"><em>(Optional)</em> The position at which insert the text. If omitted, the current caret position is used instead.</td></tr>
 </table>
@@ -149,7 +164,7 @@ Else, it's sent to SciTE using SendMessage.</p>
 </table>
 </div>
 
-<div class="methodShort"><h2>ResolveProp()</h2>
+<div class="methodShort"><h2>ResolveProp() <span class="ver">[v3.0.00+]</span></h2>
 <p>Retrives the value of a property key, resolving $(dereferences) in the process.</p>
 <pre class="Syntax">oSciTE.ResolveProp(propname)</pre>
 <table class="info">

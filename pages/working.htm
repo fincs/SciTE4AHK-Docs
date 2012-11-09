@@ -11,13 +11,29 @@
 <h2>Running AutoHotkey scripts</h2>
 <p>Running AutoHotkey scripts can be done with a simple keypress (F5) or by clicking the Run button in the toolbar.</p>
 <img src="img/runscript.png" alt="" border="0"/>
+<h2>Using the AutoHotkey Help</h2>
+<p>Looking up a certain command/function in the help file is very simple. In order to do so, select said
+command/function and press F1.</p>
 <h2>Compiling AutoHotkey scripts</h2>
 <p>Press F7 to compile your script. If you've installed Compile_AHK II, it'll be detected:</p>
 <img src="img/compileahk.png" alt="" border="0"/>
 <p>You can choose the compilation options, then click on Compile to compile the script.</p>
-<h2>Selecting the AutoHotkey version</h2>
-<p>If you have installed AutoHotkey_L, you can choose which flavor you want to use for running and
+<h2>Selecting the AutoHotkey version (advanced)</h2>
+<p>You can choose which build of AutoHotkey you want to use for running and
 compiling scripts by clicking on the platform selection button in the toolbar
-(<img src="icon/ahkswitch.ico" alt="" border="0"/>).</p>
+(<img src="icon/ahkswitch.ico" alt="" border="0"/>). This is useful if you
+need to check your scripts' compatibility with said builds.</p>
+<p>Currently SciTE4AutoHotkey lets you use the following builds:</p>
+<ul>
+<li><strong>ANSI</strong>: it refers to the ANSI build: <code>%AhkDir%\AutoHotkeyA32.exe</code></li>
+<li><strong>Unicode</strong>: it refers to the Unicode build: <code>%AhkDir%\AutoHotkeyU32.exe</code></li>
+<li><strong>x64</strong>: it refers to 64-bit (Unicode) build: <code>%AhkDir%\AutoHotkeyU64.exe</code></li>
+</ul>
+<p>If AutoHotkey v2-alpha is installed, the following platforms are also available (although without
+support for compiling scripts due to the lack of publicly released self-contained binaries):</p>
+<ul>
+<li><strong>v2(x86)</strong>: requires <code>%AhkDir%\v2-alpha\x86\AutoHotkey.exe</code> to be present.</li>
+<li><strong>v2(x64)</strong>: requires <code>%AhkDir%\v2-alpha\x64\AutoHotkey.exe</code> to be present.</li>
+</ul>
 </body>
 </html>

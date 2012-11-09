@@ -2,77 +2,222 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>GenDocs 2.1</title>
+<title>GenDocs 3.0-alpha003</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>GenDocs 2.1</h1>
-<h2 style="background-color:#912D2D">WARNING: GenDocs 3.0 will change the documentation syntax</h2>
-<p>GenDocs is a utility that allows you to automatically generate documentation for your functions.
-Using it is very simple: just add the following to the script and edit it for each function you want to document:</p>
-<pre class="NoIndent"><em>;
-; Function: functionName
-; Description:
-;     Description (BBCode allowed)
-; Syntax: Syntax(used, to, call [, this, function])
-; Parameters:
-;     Param1 - Description
-;         More text
-;         Even more text
-;     Param2 - (Optional) BBCode is allowed too, like
-;         [b]this[/b] or [code]this ; and comment highlighting[/code]
-; Return Value:
-;     Return value description (BBCode allowed)
-; Remarks:
-;     Remarks go here (BBCode allowed)
-; Related: MyFunc1, MyFunc2, [bbcode]some literal text with commas (`,) and backticks (``). BBCode allowed.
-;     When this parameter is omitted, it defaults to linking every
-;     single documentated function in the file.
-; Example:
-;     An example or a pointer to a file or url goes here
-;</em></pre>
-<p><em>Note: &quot;Tab&quot; in this help section means a tab and/or 3/4/5 spaces.</em></p>
-<h2>Special features</h2>
-<p>You can omit the Parameters, Return Value, Remarks, Related and Example sections.</p>
-<p>When specifying example code or code in code tags you can use the following placeholder commands
-instead of writing code:</p>
-<pre class="Syntax">file:<i>fileName</i>  <em>; This represents the contents of the file <i>fileName</i>.</em>
-url:<i>uri</i>        <em>; This represents the contents of the web address <i>uri</i>.</em></pre>
-<p>There is a BBCode extension in order to create links to the AutoHotkey documentation:</p>
-<pre class="Syntax">[ahk]CommandName[/ahk]
-[ahk=CommandName]Some text[/ahk]</pre>
-<p>The following BBCode extension adds a line break:</p>
-<pre class="Syntax">[br]</pre>
-<p>To escape square brackets [], commas (,) and backticks (`) in the Related section prepend a backtick
-to the character.</p>
-<p>To force BBCode in an entry inside the Related section write [bbcode] before the text.</p>
+
+<h1>GenDocs 3.0-alpha003</h1>
+<p>GenDocs is a utility for easily creating documentation for AutoHotkey libraries. It supports the following structures:</p>
+<ul>
+<li>Functions</li>
+<li>Pages</li>
+<li>Classes<ul>
+	<li>Constructors</li>
+	<li>Methods</li>
+	<li>Properties</li>
+	<li>Inner classes</li>
+</ul></li>
+</ul>
+<p>GenDocs works via specially-crafted comment blocks. For more information, look at the <a href="#example">example below</a>.</p>
+
+<h2>GenDocs-flavored Markdown</h2>
+<p>GenDocs uses a stripped down version of Markdown, which supports:</p>
+<ul>
+<li>Paragraphs: blocks of text delimited by blank lines. Equivalent to HTML <code>&lt;p&gt;...&lt;/p&gt;</code>.</li>
+<li>In-paragraph line breaks: end a line with two spaces. Equivalent to HTML <code>&lt;br/&gt;</code>.</li>
+<li>Headings: start a line with up to three hash (<code>#</code>) characters, followed by space. Equivalent to HTML <code>&lt;hN&gt;...&lt;/hN&gt;</code>.</li>
+<li>Emphasis marks: <code>*...*</code>. Equivalent to HTML <code>&lt;em&gt;...&lt;/em&gt;</code>.</li>
+<li>Strong emphasis marks: <code>**...**</code>. Equivalent to HTML <code>&lt;strong&gt;...&lt;/strong&gt;</code>.</li>
+<li>Inline code marks: <code>`...`</code>. Equivalent to HTML <code>&lt;code&gt;...&lt;/code&gt;</code>.</li>
+<li>Code sections: unlike standard Markdown, they use the blockquote syntax: blocks of text whose lines start with <code>&gt;</code> followed by a space.</li>
+<li>Unordered lists: lines that start with <code>*</code>. Equivalent to HTML <code>&lt;ul&gt;...&lt;li&gt;...&lt;/li&gt;...&lt;/ul&gt;</code>.</li>
+<li>Ordered lists: lines that start with a number, dot and space (e.g. <code>1.</code>); or letter, dot and space (e.g. <code>a.</code>). Equivalent to HTML <code>&lt;ol&gt;...&lt;/ol&gt;</code> and <code>&lt;ol style=&quot;list-style-type: lower-alpha&quot;&gt;...&lt;/ol&gt;</code> respectively.</li>
+<li>Escape sequences: the sequences <code>\*</code>, <code>\`</code>, <code>\[</code>, <code>\]</code>, <code>\!</code> and <code>\\</code> are recognized, and yield literal characters.</li>
+<li>Links: <code>[Link text](Link URL)</code>. Equivalent to HTML <code>&lt;a href=&quot;...&quot;&gt;...&lt;/a&gt;</code>.</li>
+<li>Images: <code>![Image ALT text](Image file name)</code>. Equivalent to HTML <code>&lt;img src=&quot;...&quot; alt=&quot;...&quot;/&gt;</code>.</li>
+</ul>
+
 <h2>Running GenDocs</h2>
 <p>Open the script you want to generate the documentation for, then click on its icon in the toolbar
 (<img src="icon/gendocs.ico" alt="" border="0"/>) then on the Generate button.</p>
 <img src="img/gendocs.png" alt="" border="0"/>
-<p>Alternatively run GenDocs with the following command-line parameters:</p>
-<pre class="NoIndent">GenDocs.ahk <i>&lt;scriptFile&gt;</i></pre>
-<p>Documentation is always saved on the folder <em>%SelectedScriptDir%</em>\<em>%SelectedScriptName%</em>.</p>
-<h2>Example (Anchor by polyethene)</h2>
-<pre class="NoIndent"><em>;
-; Function: Anchor
-; Description:
-;     Defines how controls should be automatically positioned relatively to the new dimensions of a GUI when resized.
-; Syntax: Anchor(cl[, a = "", r = 0])
-; Parameters:
-;     cl - a control HWND, associated variable name or ClassNN to operate on
-;     a - (optional) one or more of the anchors: 'x', 'y', 'w' (width) and 'h' (height),
-;         optionally followed by a relative factor, e.g. x h0.5
-;     r - (OptIoNal) any SetWindowPos ([url]http://msdn2.microsoft.com/en-us/library/ms633545.aspx[/url]) flags,
-;         SWP_NOZORDER is automatically applied to retain the current Z order
-; Return Value:
-;     None.
-; Remarks:
-;     I think none...
-; Related: [bbcode]None.
-; Example:
-;     file:anchor-example.ahk
-;</em></pre>
+<p>Documentation is always saved on the folder <em>%SelectedScriptDir%</em>\<em>%SelectedScriptName%-doc</em>.</p>
+<h2 id="example">Example</h2>
+<pre class="NoIndent"><em>/*!
+	Library: Test library, version 1.0
+		This library does something
+		
+		or maybe not!  
+		In-paragraph line breaks work
+	Author: fincs
+	License: WTFPL
+*/
+
+/*!
+	Page: Test Page
+	Filename: TestPage
+	Contents: @file:TestPage.md
+*/
+
+/*!
+	Function: something(a, b [, c])
+		something() does something :)
+
+	Parameters:
+		a - Something
+		    &gt; MsgBox Yay, this works?! ; comment!
+		b - Something else
+		c - (Optional) Even more stuff
+
+	Remarks:
+		Meow.
+
+	Returns:
+		Dinner, really :)
+
+	Extra:
+		### It looks like everybody's been taken to Tykogi Tower!
+		Oh, my!
+
+	Throws:
+		Stuff if stuff
+*/</em>
+
+something(a, b, c=&quot;&quot;)
+{
+}
+
+<em>/*!
+	Class: MyClass
+		Provides an interface to *dinner*
+	Inherits: OtherClass
+	Example: @file:TestExample.ahk
+*/</em>
+
+class MyClass extends OtherClass
+{
+	<em>/*!
+		Constructor: (a)
+			Creates a MyClass object.
+		Parameters:
+			a - Something
+	*/</em>
+	__New(a)
+	{
+	}
+	
+	<em>/*!
+		Method: Hello()
+			Displays hello world message.
+	*/</em>
+	Hello()
+	{
+	}
+	
+	__Get(m, p*)
+	{
+		return this[&quot;get_&quot; m](p*)
+	}
+
+	__Set(m, ByRef v, p*)
+	{
+		return this[&quot;set_&quot; m](v, p*)
+	}
+	
+	<em>/*!
+		Property: Something [get/set]
+			It's the something of a something
+		Value:
+			The something to set
+		Remarks:
+			Automagically dinner
+	*/</em>
+	
+	get_Something()
+	{
+	}
+	
+	set_Something(ByRef v)
+	{
+	}
+	
+	<em>/*!
+		Class: Meow
+			What do you want me to do?!?!
+		@UseShortForm
+		Example:
+			&gt; MsgBox Meow example ; Testing
+	*/</em>
+	class Meow
+	{
+		<em>/*!
+			Method: Hello([msg])
+				Displays a greeting message.
+			Parameters:
+				msg - (Optional) The message to display. Defaults to &quot;Hello, world!&quot;.
+			Returns: Absolutely nothing :)
+			Throws: Again, nothing :)
+		*/</em>
+		Hello(msg=&quot;Hello, world!&quot;)
+		{
+			MsgBox, % msg
+		}
+		
+		<em>/*!
+			Class: MoreNesting
+				Nesting is so much fun!
+			Example:
+				&gt; MsgBox MoreNesting example ; Testing
+		*/</em>
+		
+		class MoreNesting
+		{
+			<em>/*!
+				Property: HasDinner [get]
+					Does this object have dinner?
+			*/</em>
+			__Get(m)
+			{
+				if m = HasDinner
+					return true
+			}
+		}
+		
+		<em>/*!
+			End of class
+		*/</em>
+	}
+	<em>/*!
+		End of class
+	*/</em>
+
+	<em>/*!
+		Class: InnerCls
+			This time it's dinnerish!
+		@UseShortForm
+	*/</em>
+	class InnerCls
+	{
+		<em>/*!
+			Constructor: (params...)
+			Parameters:
+				params - The parameters to use to create the object.
+			Throws: I have no clue!
+		*/</em>
+		__New(prm*)
+		{
+		}
+	}
+	<em>/*!
+		End of class
+	*/</em>
+}
+
+<em>/*!
+	End of class
+*/</em>
+</pre>
 </body>
 </html>
