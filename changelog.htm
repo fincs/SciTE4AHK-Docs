@@ -10,6 +10,23 @@
 <h1>Changelog</h1>
 
 <!-- new versions go here -->
+<h2>v3.0.01.01 - November 30, 2012</h2>
+<h4>Changes and new features:</h4>
+<ul>
+<li>Upgraded to GenDocs v3.0-alpha004.</li>
+<li>Added <code>oSciTE.IsPortable</code>, <code>oSciTE.UserDir</code> and <code>oSciTE.Output(text)</code>.</li>
+<li>Added debugger configuration support (address/port, stream capturing enabling).</li>
+<li>The internal source code files have been reorganized in order to fix certain failures on some systems.</li>
+<li>Other miscellaneous improvements.</li>
+</ul>
+<h4>Bug-fixes:</h4>
+<ul>
+<li>SciTE/Scintilla is now compiled with VS2012 Update 1's official XP targeting toolchain and with <code>/arch:IA32</code>.
+This fixes the incompatibility with several older CPUs.</li>
+<li>Breakpoint resetting on launch now works again.</li>
+<li>TillaGoto now correctly parses <code>/* ... */</code> comment blocks.</li>
+</ul>
+
 <h2>v3.0.01 - November 9, 2012</h2>
 <ul>
 <li><strong>Upgraded to SciTE/Scintilla 3.2.3</strong></li>
