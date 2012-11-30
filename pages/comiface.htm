@@ -25,11 +25,20 @@ MsgBox % oSciTE.CurrentFile</pre>
 <pre class="Syntax">oSciTE.SciTEHandle</pre>
 </div>
 
+<div class="methodShort"><h2>UserDir <span class="ver">[v3.0.01.01+]</span></h2>
+<p>Retrieves the user profile directory.</p>
+<pre class="Syntax">oSciTE.UserDir</pre>
+</div>
+
+<div class="methodShort"><h2>IsPortable <span class="ver">[v3.0.01.01+]</span></h2>
+<p>Gets whether the SciTE installation is portable or not.</p>
+<pre class="Syntax">oSciTE.IsPortable</pre>
+</div>
+
 <div class="methodShort"><h2>Message()</h2>
 <p>Sends a message to either SciTE or the toolbar.</p>
 <pre class="Syntax">oSciTE.Message(msg [, wParam, lParam])</pre>
 <table class="info">
-
   <tr><td width="15%">msg</td><td width="85%">The message number to send.</td></tr>
   <tr><td width="15%">wParam</td><td width="85%"><em>(Optional)</em> The wParam of the message. If omitted, defaults to zero.</td></tr>
   <tr><td width="15%">lParam</td><td width="85%"><em>(Optional)</em> The lParam of the message. If omitted, defaults to zero.</td></tr>
@@ -170,6 +179,14 @@ Else, it's sent to SciTE using SendMessage.</p>
 <table class="info">
   <tr><td width="15%">propname</td><td width="85%">The name of the property key to retrieve.</td></tr>
   <tr><td width="15%"><strong>Returns</td><td width="85%">The value of the property key.</td></tr>
+</table>
+</div>
+
+<div class="methodShort"><h2>Output() <span class="ver">[v3.0.01.01+]</span></h2>
+<p>Adds text to SciTE's output pane.</p>
+<pre class="Syntax">oSciTE.Output(text)</pre>
+<table class="info">
+  <tr><td width="15%">text</td><td width="85%">The text to add.</td></tr>
 </table>
 </div>
 
