@@ -75,6 +75,12 @@
 			<param name="Name" value="Calltips and AutoComplete">
 			<param name="Local" value="pages/calltips_autoc.htm">
 			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Extending the editor">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="COM interface">
 			<param name="Local" value="pages/comiface.htm">
@@ -91,14 +97,9 @@
 			<param name="ImageNumber" value="11">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Dialog creators">
-			<param name="Local" value="pages/dialogcreators.htm">
+			<param name="Name" value="MsgBox Creator">
+			<param name="Local" value="pages/msgboxc.htm">
 			<param name="ImageNumber" value="11">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="AutoHotkey.net Tool">
-			<param name="Local" value="pages/ahknettool.htm">
-			<param name="ImageNumber" value="13">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="GenDocs 3.0">
