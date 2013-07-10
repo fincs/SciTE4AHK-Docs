@@ -6,7 +6,7 @@
 </HEAD><BODY>
 <OBJECT type="text/site properties">
 	<param name="Window Styles" value="0x800025">
-<param name="Font" value="Microsoft Sans Serif,8,0">
+	<param name="ImageType" value="Folder">
 </OBJECT>
 <UL>
 	<LI> <OBJECT type="text/sitemap">

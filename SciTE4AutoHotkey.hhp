@@ -1,11 +1,17 @@
 [OPTIONS]
+Binary Index=No
 Compatibility=1.1 or later
 Compiled file=SciTE.chm
 Contents file=toc.hhc
+Default Window=Contents
 Default topic=intro.htm
 Display compile progress=No
+Full-text search=Yes
 Language=0x409 English (United States)
 Title=SciTE4AutoHotkey Help
+
+[WINDOWS]
+Contents="SciTE4AutoHotkey Help","toc.hhc","","intro.htm","intro.htm",,,,,0x33520,,0x10200e,,,,,,3,,0
 
 
 [FILES]
