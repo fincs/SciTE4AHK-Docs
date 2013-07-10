@@ -82,6 +82,10 @@
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Extensions">
+			<param name="Local" value="pages/extensions.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="COM interface">
 			<param name="Local" value="pages/comiface.htm">
 			</OBJECT>

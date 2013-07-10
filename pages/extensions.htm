@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Extensions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Extensions <span class="ver">[v3.0.03-post1+]</span></h1>
+<p>SciTE4AutoHotkey's functionality and behaviour can be extended through the use of
+Extensions. Extensions are packages that contain setting files, Lua scripts and other
+files necessary in order to provide such functionality and behaviour. They are distributed
+as compressed packages (.s4x) that are decompressed when the extension is to be installed.</p>
+<h2>Managing Extensions</h2>
+<p>In order to manage your Extensions, right-click on the toolbar and select "Extensions >
+Extension Manager". The Extension Manager window will pop up.</p>
+<p>{TODO SCREENSHOT}</p>
+<ul>
+<li>You can check and uncheck each extension in order to enable/disable them.</li>
+<li>"Install extension" allows you to install or upgrade an extension.</li>
+<li>"Remove extension" allows you to remove one or more extensions.</li>
+<li>"Create extension" allows you to create your own extension. See <a href="#Developing">
+Developing Extensions</a> for more details.</li>
+<li>"Export extension" allows you to create an installable Extension package (.s4x) in order
+to distribute your extension. See <a href="#Developing">Developing Extensions</a> for more details.</li>
+</ul>
+<p>In order to apply changes, close the window.</p>
+<h2 id="Developing">Developing Extensions</h2>
+<p>Extensions have an internal package name which is intended to be unique for all extensions. The name
+should be a valid file name and should not contain spaces. It is recommended that it be lowercase.
+The recommended way to name your extensions is: <code>usr.author.extension_name</code>.</p>
+<p>Extensions are stored in the <code>%SciTEProfileDir%\Extensions</code> folder, each
+in its own subfolder (named after the internal package name). Each extension has a <code>manifest.ini</code>
+file which contains information about the extension:</p>
+<ul>
+<li><code>[Extension]</code> section (all entries mandatory):</li>
+<ul>
+  <li><code>Name</code>: Specifies the name of the extension.</li>
+  <li><code>Author</code>: Specifies the author of the extension.</li>
+  <li><code>Version</code>: Specifies the version number. It should be lexicographically comparable (e.g. Semantic versioning).</li>
+</ul>
+<li><code>[Behaviour]</code> section (all entries optional):</li>
+<ul>
+  <li><code>Properties</code>: Specifies a pipe (|) delimited list of property files (relative to the extension folder and
+  <strong>without</strong> the <code>.properties</code> extension) to apply to SciTE.</li>
+  <li><code>LuaScript</code>: Specifies the filename of the Lua script (relative to the extension folder) to load into SciTE.</li>
+  <li><code>Toolbar</code>: Specifies the filename of a toolbar properties file (relative to the extension folder) containing
+  toolbar buttons to show in the AutoHotkey Toolbar.</li>
+  <li><code>LanguageMenu</code>: Specifies text to be added to the <code>menu.language</code> SciTE property.
+  Can contain <code>$(dereferences)</code>.</li>
+  <li><code>FileFilter</code>: Specifies text to be added to both the <code>open.filter</code> and <code>save.filter</code> SciTE properties.
+  Can contain <code>$(dereferences)</code>.</li>
+</ul>
+</ul>
+<p>The "Create extension" dialog allows you to easily start writing an extension; providing template code. When the manifest is changed,
+you need to make SciTE4AutoHotkey reload it by right-clicking on the toolbar then selecting "Extensions > Reload extensions".</p>
+<h2>Utilities Available in Extensions</h2>
+<h3>Lua scripts</h3>
+<p>The following API is additionally available:</p>
+<pre class="NoIndent">RegisterEvents(eventTable) <em>-- Chains events specified by the table. See the Lua script template for more details.</em>
+CancelAutoComplete() <em>-- Cancels the AutoComplete popup.</em>
+GetWord(pos)
+GetCurWord()
+getPrevLinePos()
+isInTable(table, elem)
+GetFilteredLine(lineN, style1, style2) <em>-- Retrieves the text of the specified line that is not styled using the specified numbers.</em>
+FileExists(fileName)
+
+g_SettingsDir <em>-- Global variable, points to %SciTEProfileDir%\Settings.</em>
+</pre>
+<h3>SciTE properties</h3>
+<p>The following properties are additionally available:</p>
+<ul>
+<li><code>extensions.dir</code> - Path to <code>%SciTEProfileDir%\Extensions</code>.</li>
+</ul>
+<h3>Toolbar definition files</h3>
+<p>The following dereferences are additionally available:</p>
+<ul>
+<li><code>%EXTDIR%</code> - Path to the extension's folder.</li>
+</ul>
+</body>
+</html>
