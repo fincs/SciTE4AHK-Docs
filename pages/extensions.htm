@@ -7,15 +7,15 @@
 <link href="../default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>Extensions <span class="ver">[v3.0.03-post1+]</span></h1>
+<h1>Extensions <span class="ver">[v3.0.04+]</span></h1>
 <p>SciTE4AutoHotkey's functionality and behaviour can be extended through the use of
 Extensions. Extensions are packages that contain setting files, Lua scripts and other
 files necessary in order to provide such functionality and behaviour. They are distributed
 as compressed packages (.s4x) that are decompressed when the extension is to be installed.</p>
-<h2>Managing Extensions</h2>
+<h2 id="ExtMgr">Managing Extensions</h2>
 <p>In order to manage your Extensions, right-click on the toolbar and select "Extensions >
 Extension Manager". The Extension Manager window will pop up.</p>
-<p>{TODO SCREENSHOT}</p>
+<p><img src="img/extmgr.png" alt="" border="0"/></p>
 <ul>
 <li>You can check and uncheck each extension in order to enable/disable them.</li>
 <li>"Install extension" allows you to install or upgrade an extension.</li>
@@ -55,6 +55,7 @@ file which contains information about the extension:</p>
 </ul>
 <p>The "Create extension" dialog allows you to easily start writing an extension; providing template code. When the manifest is changed,
 you need to make SciTE4AutoHotkey reload it by right-clicking on the toolbar then selecting "Extensions > Reload extensions".</p>
+<p><img src="img/extcreator.png" alt="" border="0"/></p>
 <h2>Utilities Available in Extensions</h2>
 <h3>Lua scripts</h3>
 <p>The following API is additionally available:</p>
