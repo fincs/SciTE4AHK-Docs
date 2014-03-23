@@ -10,29 +10,40 @@
 .header h1 { border-bottom: none; padding-bottom: 0; }
 .header p { padding: 0 20px; }
 .header { border-bottom: solid 1px black; }
-.update { font-size: 70%; float: right; }
+.update a { color: #514721; }
+.update
+{
+	/*float: right;*/
+	border: 1px solid #DDD;
+	margin-bottom: 1em;
+	padding: 0.6em 0.8em;
+	background: #FFF6BF;
+	color: #514721;
+	border-color: #FFD324;
+}
+.sidenote { float: right; }
 </style>
 </head>
 <body>
 
 <div class="header">
 <h1>SciTE4AutoHotkey</h1>
+<p class="sidenote"><a href="http://fincs.ahk4.net/donate.html"><img src="http://fincs.ahk4.net/btc.png" alt="BTC"> Donate</a></p>
 <p style="font-size:130%;">
-<!--<a href="#Downloads">Download</a> |-->
 <a href="intro.htm">Documentation</a> |
 <a href="http://ahkscript.org/boards/viewtopic.php?f=6&t=62">Forum</a> |
-<!--<a href="http://www.autohotkey.com/board/topic/54431-/">Forum</a> |-->
-<a href="changelog.htm">Changelog</a> |
-<a href="https://github.com/fincs/SciTE4AutoHotkey">Source code</a>
-<span class="update">Last update: December 24, 2013 - v3.0.04.01</span></p>
+<a href="https://github.com/fincs/SciTE4AutoHotkey">Source code</a></p>
 </div>
 
-<!--
-<p><img src="logo.png" border="0" alt="" style="border-radius: 16px;"/></a>
+<h2 id="Downloads">Downloads</h2>
+<div class="update"><a href="changelog.htm"><strong>v3.0.05</strong> - March 23, 2014</a></div>
+<p><a href="dl/s4ahk-install.exe"><strong style="font-size:150%">Installer</strong></a> - this program will install SciTE4AutoHotkey automatically.</p>
+<h3>Other Downloads</h3>
+<p><a href="dl/s4ahk-portable.zip">Portable .ZIP</a> - designed for <strong>USB sticks</strong>. Extract this archive to your portable AutoHotkey folder.<p>
+<p><a href="dl/s4ahk-scilexer.zip">SciLexer.dll</a> with AutoHotkey support - useful if you want to develop an application that uses Scintilla.</p>
+<p>Some older downloads are available in <a href="dl/">the archives</a>.</p>
 
-<h2>What is it?</h2>
--->
-
+<h2 id="Description">What is it?</h2>
 <p>SciTE4AutoHotkey is a lightweight and easy to use <a href="http://www.scintilla.org/">SciTE-based</a> AutoHotkey script editor. It provides:</p>
 <ul>
 <li><span style="color: red">Syntax</span> <span style="color: blue">highlighting</span></li>
@@ -46,13 +57,9 @@
 <li>Tools for AutoHotkey scripting</li>
 <li>Powerful extension mechanisms</li>
 </ul>
-<h2 id="Downloads">Downloads</h2>
-<p><a href="dl/SciTE4AHK300401_Install.exe"><strong style="font-size:125%">Installer</strong></a> - this program will install SciTE4AutoHotkey automatically.</p>
-<p><a href="dl/SciTE4AHK300401_Portable.zip">Portable .ZIP</a> - designed for USB sticks. Extract this archive to your AutoHotkey folder.</p>
-<p><a href="dl/SciTE4AHK300401_StandaloneSciLexer.zip">SciLexer.dll</a> with AutoHotkey support - useful if you want to develop an application that uses Scintilla.</p>
-<p>Some older downloads are available in <a href="dl/">the archives</a>.</p>
-<br>
-<hr>
+
+<br/>
+<hr/>
 <p><em>Software License:</em> <a href="license.htm">MIT, WTFPL</a>. <em>Original SciTE made by Neil Hodgson.</em></p>
 <p>This software wouldn't have existed if it weren't for <a href="credits.htm">several people</a>.</p>
 </body>
