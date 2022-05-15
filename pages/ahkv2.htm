@@ -9,30 +9,36 @@
 </head>
 <body>
 <h1>AutoHotkey v2 Support</h1>
-<p>SciTE4AutoHotkey supports editing <a href="http://ahkscript.org/v2/">AutoHotkey v2</a>
-scripts. To enable this feature, <code>%AutoHotkeyDir%\v2-alpha\x86\AutoHotkey.exe</code>
-(or x64) must exist. After this, select the v2 platform using the platform selector
+<p><strong>Functionality subject to change in a future version of SciTE4AutoHotkey.</strong></p>
+<p>SciTE4AutoHotkey supports editing <a href="https://www.autohotkey.com/v2/">AutoHotkey v2</a>
+scripts. To enable this feature, the <a href="https://www.autohotkey.com/download/ahk-v2.zip">latest AutoHotkey v2 zip</a>
+must be extracted to <code>%AutoHotkeyDir%\v2</code>.
+After this, select the v2 platform using the platform selector
 (<img src="icon/ahkswitch.ico" alt="" border="0"/>), and .ahk files will now be detected as
 AutoHotkey v2 files. This setting takes immediate effect and does not require restarting the
 editor. The following items are supported for AutoHotkey v2 Code:</p>
 <ul>
 <li>Highly Accurate Syntax Highlighting that includes support for:
 	<ul>
-	<li>Command and Function syntax (including Object command syntax)</li>
-	<li>Flow of Control statements</li>
+	<li>Modern AutoHotkey v2 expression syntax, including function call statements</li>
+	<li>Control flow statements</li>
+	<li>Class and property getter/setter definitions</li>
 	<li>Line and block comments</li>
-	<li>#Directives</li>
+	<li>#Directives taking both string and expression arguments</li>
 	<li>Escape sequences in strings</li>
-	<li>Nested <code>%expressions%</code> (up to 5 levels of nesting), including command argument force-expression (<code>% Expr</code>) mode</li>
-	<li>Continuation sections of all kind, options are even detected</li>
-	<li>Built-in Variables and Built-in Functions</li>
-	<li>Object Methods and Object Properties</li>
-	<li>Built-in Object Methods and Built-in Object Properties</li>
+	<li>Continuation sections (for both strings and expressions), with option parsing</li>
+	<li>Top level identifiers and object syntax identifiers</li>
+	<li>Customizable substyles and keyword lists for known identifiers, currently including by default:
+		<ul>
+		<li>Predefined variables, functions and classes</li>
+		<li>Predefined object properties and methods</li>
+		</ul>
+	</li>
 	<li>Hotkeys, Hotstrings, Remaps and Labels</li>
 	</ul>
 </li>
 <li>Folding</li>
-<li>AutoComplete and Calltips: the latter contain a short description of all Built-in Functions.</li>
+<li>AutoComplete</li>
 <li>Interactive Debugging</li>
 <li>Launching scripts using the Run / Quick Run command.</li>
 </ul>

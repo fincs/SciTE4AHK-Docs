@@ -11,13 +11,40 @@
 <h1>Changelog</h1>
 
 <!-- new versions go here -->
+<h2>v3.1.0 - May 15, 2022</h2>
+<h4>Changes and new features:</h4>
+<p>Dropped support for Windows XP.</p>
+<p>Upgraded to SciTE/Scintilla 5.2.2 and Lexilla 5.1.6.</p>
+<p>AutoHotkey v1.1.34 syntax definition updates.</p>
+<p>AutoHotkey v2.0-beta support, including a completely rewritten new lexer.</p>
+<p>Keyword definitions are now almost entirely sourced from the AutoHotkey documentation instead of maintained by hand.</p>
+<p>Introduced new SciTE4AutoHotkey style format (<code>s4ahk.style=2</code>). Version 1 styles are automatically converted
+when edited by the style editor. Older legacy styles are no longer supported.</p>
+<p>Introduced new default Light/Dark styles (replacing the previous collection of built-in styles).</p>
+<p>The code font is now independently configured and no longer depends on the selected style.</p>
+<p>Enhanced the graphical settings and style editors to support more common options.</p>
+<p>Merged numerous Debugger improvements and bug-fixes, courtesy of Lexikos.</p>
+<p>SciTE4AutoHotkey is now registered as an "Open With" application for .ahk files.</p>
+<p>Added Swedish translation (courtesy of Mikael Hiort).</p>
+<p>Added Korean translation (courtesy of joyfuI).</p>
+<p>Added mechanism for disabling global Toolbar buttons.</p>
+<p>Added support for passing parameters to debugged scripts.</p>
+<h4>Known issues:</h4>
+<p>Calltip functionality has been temporarily removed as a side effect of the new syntax definition autogeneration, as well as SciTE limitations.</p>
+<p>Help file word lookup is currently broken as a result of (not so) recent changes in AutoHotkey's CHM file.</p>
+<p>Debugging AutoHotkey v2 scripts is known to sometimes produce crashes under certain circumstances.</p>
+<p>AutoHotkey v2 AutoIndent only works when control flow statements are typed in lowercase.</p>
+<h4>Bug-fixes:</h4>
+<p>The auto-updater now behaves properly if the update server is down instead of behaving erratically.</p>
+<p>Many other miscellaneous fixes, optimizations, code modernisation and cleanup.</p>
+
 <h2>v3.0.06.01 - October 12, 2014</h2>
 <h4>Changes and new features:</h4>
 <p>Upgraded to SciTE/Scintilla 3.5.1.</p>
 <p>AutoHotkey v1.1.16 syntax definition updates.</p>
 <p>AutoHotkey v2.0-a056 syntax definition updates.</p>
 <p>Added 'Run selection' context menu command (requires AutoHotkey v1.1.17)</p>
-<h4>Bug-fixes:</h2>
+<h4>Bug-fixes:</h4>
 <p>AutoHotkey v2 syntax highlighting: BIFs in command syntax (broken by v3.0.06)</p>
 
 <h2>v3.0.06 - August 18, 2014</h2>
@@ -29,7 +56,7 @@
 <p>AutoHotkey v2: added object command syntax support.</p>
 <p>AutoHotkey v2: introduced new syntax highlighting styles for object properties, methods, built-in
 properties and built-in methods.</p>
-<h4>Bug-fixes:</h2>
+<h4>Bug-fixes:</h4>
 <p>Minor debugger refactoring.</p>
 <p>Toolbar startup stability and reliability fixes.</p>
 
@@ -38,7 +65,7 @@ properties and built-in methods.</p>
 <p>Upgraded to SciTE/Scintilla 3.4.1.</p>
 <p>Incremental search and replace were disabled, this makes the 'Find/Replace Next' button useful again.</p>
 <p>An 'Unmark All' button was added to the Find command.
-<h4>Bug-fixes:</h2>
+<h4>Bug-fixes:</h4>
 <p>Toolbar startup stability and reliability fixes.</p>
 
 <h2>v3.0.05 - March 23, 2014</h2>

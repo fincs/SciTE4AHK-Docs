@@ -10,6 +10,7 @@
 <body>
 
 <h1>GenDocs 3.0-alpha004</h1>
+<p><strong>This functionality is deprecated and will be removed in a future version of SciTE4AutoHotkey.</strong></p>
 <p>GenDocs is a utility for easily creating documentation for AutoHotkey libraries. It supports the following structures:</p>
 <ul>
 <li>Functions</li>
@@ -49,8 +50,8 @@
 <pre class="NoIndent"><em>/*!
 	Library: Test library, version 1.0
 		This library does something
-		
-		or maybe not!  
+
+		or maybe not!
 		In-paragraph line breaks work
 	Author: fincs
 	License: WTFPL
@@ -108,7 +109,7 @@ class MyClass extends OtherClass
 	__New(a)
 	{
 	}
-	
+
 	<em>/*!
 		Method: Hello()
 			Displays hello world message.
@@ -116,7 +117,7 @@ class MyClass extends OtherClass
 	Hello()
 	{
 	}
-	
+
 	__Get(m, p*)
 	{
 		return this[&quot;get_&quot; m](p*)
@@ -126,7 +127,7 @@ class MyClass extends OtherClass
 	{
 		return this[&quot;set_&quot; m](v, p*)
 	}
-	
+
 	<em>/*!
 		Property: Something [get/set]
 			It's the something of a something
@@ -135,15 +136,15 @@ class MyClass extends OtherClass
 		Remarks:
 			Automagically dinner
 	*/</em>
-	
+
 	get_Something()
 	{
 	}
-	
+
 	set_Something(ByRef v)
 	{
 	}
-	
+
 	<em>/*!
 		Class: Meow
 			What do you want me to do?!?!
@@ -165,14 +166,14 @@ class MyClass extends OtherClass
 		{
 			MsgBox, % msg
 		}
-		
+
 		<em>/*!
 			Class: MoreNesting
 				Nesting is so much fun!
 			Example:
 				&gt; MsgBox MoreNesting example ; Testing
 		*/</em>
-		
+
 		class MoreNesting
 		{
 			<em>/*!
@@ -185,7 +186,7 @@ class MyClass extends OtherClass
 					return true
 			}
 		}
-		
+
 		<em>/*!
 			End of class
 		*/</em>
